@@ -24,7 +24,11 @@ function AccountContent() {
           <p className="text-text-primary capitalize">{user?.role}</p>
         </div>
       </div>
-      <Button variant="secondary" className="mt-6 w-full" onClick={() => void logout()}>
+      <Button
+        variant="secondary"
+        className="mt-6 w-full hover:border-signal hover:bg-signal hover:text-ink transition-colors"
+        onClick={() => void logout()}
+      >
         Sign out
       </Button>
     </div>
