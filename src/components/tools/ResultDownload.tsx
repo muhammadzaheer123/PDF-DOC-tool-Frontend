@@ -7,7 +7,11 @@ interface ResultDownloadProps {
   onReset: () => void;
 }
 
-export function ResultDownload({ resultUrl, resultText, onReset }: ResultDownloadProps) {
+export function ResultDownload({
+  resultUrl,
+  resultText,
+  onReset,
+}: ResultDownloadProps) {
   return (
     <div className="rounded-[var(--radius-lg)] border border-mint/30 bg-mint/5 p-6">
       <p className="text-sm text-text-primary">Your file is ready.</p>
