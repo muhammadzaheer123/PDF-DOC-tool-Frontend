@@ -6,8 +6,17 @@ import { useRouter } from "next/navigation";
 import { Eye, EyeOff, Lock } from "lucide-react";
 import { useAuth } from "@/lib/auth/AuthContext";
 import { Button } from "@/components/ui/Button";
+import { GuestRoute } from "@/components/auth/GuestRoute";
 
 export default function LoginPage() {
+  return (
+    <GuestRoute>
+      <LoginPageContent />
+    </GuestRoute>
+  );
+}
+
+function LoginPageContent() {
   const { login } = useAuth();
   const router = useRouter();
 
@@ -37,8 +46,8 @@ export default function LoginPage() {
     <div className="flex min-h-[calc(100vh-73px)] items-center justify-center px-6 py-16">
       <div className="w-full max-w-sm">
         <div className="mb-8 flex flex-col items-center text-center">
-          <div className="mb-5 flex h-17 w-17 items-center justify-center rounded-full border border-border bg-surface">
-            <Lock size={28} className="text-signal" strokeWidth={1.75} />
+          <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface">
+            <Lock size={18} className="text-signal" strokeWidth={1.75} />
           </div>
           <h1 className="font-display text-2xl text-text-primary">
             Welcome back
